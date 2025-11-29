@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ecommerce-product-page-main/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Sneakers (fazendo)</title>
+</head>
+<body>
+    <div id="numDeCompras" class="hide">
+        0
+    </div>
+
+    <nav id="menu">
+        <div id="config">
+            <img src="ecommerce-product-page-main/images/logo.svg" alt="Logo">
+            <p>Collections</p>
+            <p>Men</p>
+            <p>Women</p>
+            <p>About</p>
+            <p>Contact</p>
+        </div>
+        <div id="perfil">
+            <img src="ecommerce-product-page-main/images/icon-cart.svg" alt="CarrinhoDeCompras" id="carrinhoDeCompras">
+            <img src="ecommerce-product-page-main/images/image-avatar.png" alt="ImgDePerfil" id="ImgDePerfil">
+        </div>
+    </nav>
+
+    <div id="container">
+        <div id="imagens">
+            <img src="ecommerce-product-page-main/images/image-product-1.jpg" id="imagemPrincipal" alt="">
+            <div id="imagensPequenas">
+                <img src="ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" alt="foto1" id="imgEmFoco">
+                <img src="ecommerce-product-page-main/images/image-product-2-thumbnail.jpg" alt="foto2">
+                <img src="ecommerce-product-page-main/images/image-product-3-thumbnail.jpg" alt="foto3">
+                <img src="ecommerce-product-page-main/images/image-product-4-thumbnail.jpg" alt="foto4">
+            </div>
+        </div>
+
+        <div id="conteudo">
+            <section>
+                <span>sneaker company</span>
+                <h1>Fall Limited Edition Sneakers</h1>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, theu'll withstand everything the weather can offer.</p>
+                <div id="preço">
+                    <p>$125.00</p>
+                    <span>50%</span>
+                </div>
+                <p id="desconto"><s>$250.00</s></p>
+                <div id="interactionArea">
+                    <div id="contador">
+                        <button id="buttonMenos">-</button> <p id="valor">0</p> <button id="buttonMais">+</button>
+                    </div>
+                    <button id="addsAoCarrinho"><img src="ecommerce-product-page-main/images/carrinho-de-compras.png" alt="">Add to cart</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="carrinhoAberto" class="hide">
+        <h1>Cart</h1>
+        <div id="carrinhoSemProdutos">
+            <p>Your cart is empty.</p>
+        </div>
+        <div id="carrinhoComProdutos" class="hide">
+            <img src="./ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" alt="">
+            <p>Fall Limited Edition Sneakers <br> <span>$125.00</span> x <span id="multipilicador">1</span> <span id="precoFinal">$125</span></p>
+            <button>Confirm</button>
+        </div>
+    </div>
+
+    <!--Carrosel de fotos-->    
+    <div id="carroselSpace" class="hide">
+        <div id="closeButton">
+            <img src="./ecommerce-product-page-main/images/icon-close.svg" alt="">
+        </div>
+        <button class="buttonCarrosel" id="buttonDaEsquerda"><img src="./ecommerce-product-page-main/images/icon-previous.svg" alt=""></button>
+        <img src="./ecommerce-product-page-main/images/image-product-1.jpg" id="imgPrincipal" alt="">
+        <button class="buttonCarrosel" id="buttonDaDireita"><img src="./ecommerce-product-page-main/images/icon-next.svg" alt=""></button>
+    </div>
+</body>
+</html>

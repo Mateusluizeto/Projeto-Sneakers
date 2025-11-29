@@ -1,0 +1,359 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/*menu*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#numDeCompras{
+    position: absolute;
+    top: 4%;
+    left: 84.5%;
+    background-color: #FF7D1A;
+    padding: 1px 7px;
+    font-size: 11px;
+    border-radius: 99px;
+    color: white;
+    font-weight: bold;
+}
+
+#menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 95vw;
+    margin: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+div#config{
+    display: flex;
+    flex-flow: row wrap;
+    height: 13vh;
+    width: 50vw;
+    align-items: center;
+    justify-content: space-between;
+
+    & p{
+        opacity: 0.5;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    & p:hover {
+        opacity: 1;
+    }
+}
+
+div#perfil{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    width: 20vw;
+}
+
+#carrinhoDeCompras{
+    cursor: pointer;
+}
+
+#ImgDePerfil{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 99px;
+    transition: .1s;
+}
+
+#ImgDePerfil:hover{
+    border: 2px solid orangered;
+}
+
+/*Organização das caixas*/
+
+#container{
+    margin-top: 20px;
+    height: 84.2vh;
+    display: flex;
+}
+
+#imagens{
+    height: 100%;
+    width: 50%;
+}
+
+#conteudo{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Imagens*/
+#imagemPrincipal{
+    height: 500px;
+    width: 500px;
+    margin-left: 170px;
+    border-radius: 15px;
+}
+
+#imagensPequenas{
+    margin-left: 160px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+#imagensPequenas > img{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#imagensPequenas > img:hover{
+    opacity: 0.5;
+}
+
+#imgEmFoco{
+    opacity: 0.5;
+    border: 2px solid orangered;
+}
+
+/*Conteudo*/
+
+section{
+    width: 55%;
+}
+
+section > span{
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+h1{
+    font-size: 2.5em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+section > p {
+    opacity: 0.5;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+
+#preço{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+#preço > p{
+    font-weight: bolder;
+    font-size: 1.8em;
+}
+
+#preço > span{
+    background: black;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+#desconto{
+    font-weight: bolder;
+}
+
+#interactionArea{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+#contador{
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.167);
+    width: 110px;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    & p{
+        font-weight: bolder;
+        font-size: 18px;
+    }
+
+    & button{
+        background: none;
+        color: rgb(236, 154, 0);
+        border: none;
+        font-size: 25px;
+        font-weight: bolder;
+        cursor: pointer;
+        height: 30px;
+    }
+}
+
+
+#interactionArea > button > img{
+    height: 20px;
+    width: 20px;
+}
+
+#interactionArea > button{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #FF7D1A;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#interactionArea > button:hover, #carrinhoComProdutos > button:hover{
+    background-color: #FFA45E;
+}
+
+#carrinhoAberto{
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    background-color: white;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.141);
+    border-radius: 10px;
+    height: 200px;
+    width: 280px;
+}
+
+#carrinhoAberto > h1{
+    font-size: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+#carrinhoAberto > #carrinhoSemProdutos > p{
+    opacity: 0.5;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#carrinhoComProdutos{
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    top: 35%;
+    left: 5%;
+}
+
+#carrinhoComProdutos > img{
+    height: 55px;
+    width: 55px;
+    border-radius: 3px
+}
+
+#carrinhoComProdutos > p{
+    font-size: 13px;
+    line-height: 25px;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.329);
+}
+
+#carrinhoComProdutos > p > #precoFinal{
+    font-weight: bold;
+    color: black;
+}
+
+#carrinhoComProdutos > button{
+    margin-top: 20px;
+    height: 40px;
+    width: 95%;
+    background-color: #FF7D1A;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#carroselSpace{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.871);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carroselSpace > img{
+    height: 70%;
+    border-radius: 20px;
+}
+
+.buttonCarrosel{
+    background-color: lightgray;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttonCarrosel:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+#esquerda{
+    position: relative;
+    left: 30px;
+}
+
+#direita{
+    position: relative;
+    right: 30px;
+}
+
+#closeButton{
+  position: absolute;
+  top: 10%;
+  left: 67%;
+  transition: .3s;
+}
+
+#closeButton > img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#closeButton:hover{
+    transform: scale(1.1);
+}
